@@ -1,0 +1,103 @@
+.project {
+    height: 100vh;
+    background-image: url("../../public/bg.png");
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-color: #000033;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.frame {
+    width: 60%;
+    height: 60%;
+    border: 5px solid #0066cc;
+    border-radius: 20px;
+    box-shadow: 0 0 10px #0066cc;
+    position: relative;
+    overflow: scroll;
+    background-color: inherit;
+}
+
+.frame::before,
+.frame::after {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+    border: 10px solid transparent;
+    border-radius: 20px;
+}
+
+.frame::before {
+    border-top-color: #fff;
+    border-left-color: #fff;
+}
+
+.frame::after {
+    border-bottom-color: #fff;
+    border-right-color: #fff;
+}
+
+.frame-content {
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+
+.frame-content.active {
+    display: block;
+}
+
+.frame-image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.frame-content h3,
+.frame-content p,
+.frame-content a {
+    color: #00ccff;
+    margin: 10px;
+}
+
+.frame-content h3 {
+    font-size: 24px;
+}
+
+.frame-content p {
+    font-size: 18px;
+}
+
+.frame-content a {
+    font-size: 20px;
+    text-decoration: none;
+    background-color: #00f;
+    padding: 5px 10px;
+    border-radius: 10px;
+}
+
+.card {
+    width: 150px;
+    height: 150px;
+    margin: 10px;
+    border: 5px solid #ccc;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.card:hover {
+    border-color: #00ccff;
+}
+
+.card-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
